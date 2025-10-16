@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Fundamentos de Computación - TP N° 1 "Streaming de videojuegos"
+    </title>
+  </head>
+  <body>
+    <section id="presupuesto-ema">
+      <h1 id="presupuesto">Presupuesto - Emanuel Schiavoni</h1>
+      <p>
+        Ajustándose al presupuesto de $1.000 USD equivalentes a $1.405.000 (con
+        el cambio a $1405 ARS al 14/10/2025), con el objetivo de llevar adelante
+        un streaming fluido y de calidad jugando a Minecraft, se seleccionaron
+        cuidadosamente un conjunto de componentes y periféricos teniendo en
+        cuenta diversos factores, optimizando el rendimiento del sistema para
+        garantizar una experiencia de transmisión estable y una buena calidad
+        visual. La configuración elegida brinda un equilibrio entre potencia de
+        procesamiento, capacidad gráfica y de multitasking, asegurando que el
+        equipo cumpla con los requisitos del juego y las demandas de la
+        transmisión en vivo en simultáneo, pero principalmente al seleccionar
+        cada componente, se priorizó la posibilidad de una futura expansión con
+        el objetivo de que el equipo pueda mantener su rendimiento durante la
+        mayor cantidad de tiempo posible. Los precios en su totalidad fueron
+        obtenidos de la tienda Maximus Gaming Hardware 
+        (<a href="http://maximus.com.ar">maximus.com.ar</a>), a excepción del 
+        UPS (Gezatek Computación: <a href="http://gezatek.com.ar">gezatek.com.ar</a>) 
+        y el juego (Microsoft Store: <a href="http://xbox.com">xbox.com</a>).
+      </p>
+      <h2 id="la-elección">La elección</h2>
+      <p>
+        <img src="./img-emanuel/presupuestos/presupuesto-pc-maximus.webp" alt="Presupuesto PC - Maximus Gaming Hardware" /><br />
+        <img src="./img-emanuel/presupuestos/presupuesto-ups-gezatek.webp" alt="Presupuesto UPS - Gezatek Computación" /><br />
+        <img src="./img-emanuel/presupuestos/presupuesto-minecraft-xbox.webp" alt="Presupuesto Minecraft - Microsoft Store" />
+      </p>
+      <h3 id="software">Software</h3>
+      <p>
+        Como costo de software solo corre el precio del juego (Minecraft Java
+        Edition, $13.199 ARS), ya que el software utilizado para hacer streaming
+        es Open Broadcast Software (OBS), que es gratis y de código abierto, y
+        como sistema operativo se eligió Ubuntu, que también es gratuito y de
+        código abierto.<br />
+        Minecraft Java Edition puede correr sin pasos extras en este SO ya que
+        se ejecuta sobre la Java Virtual Machine, incluso hay benchmarks que
+        muestran mejores rendimientos en Linux por sobre Windows.
+      </p>
+      <h2 id="los-motivos-de-cada-elección">Los motivos de cada elección</h2>
+      <h3 id="procesador">Procesador</h3>
+      <p>
+        Para seleccionar el procesador se priorizó el zócalo AM5, ya que,
+        comparado con Intel, AMD mantiene sus zócalos vigentes durante más
+        tiempo, un claro ejemplo es el zócalo AM4 que vio la luz en 2016 y aún
+        en 2025 ha recibido nuevos procesadores compatibles. El primer CPU con
+        zócalo AM5 se lanzó en fines de 2022, lo que utilizar una placa madre
+        con este zócalo va a facilitar una futura mejora del sistema y por lo
+        tanto perdurar la vida útil de la mayoría de sus componentes.<br />
+        Se eligió la versión con gráficos integrados por la disponibilidad del
+        proveedor; al utilizar una gráfica dedicada la mejor opción sería
+        conseguir la versión sin gráficos del mismo procesador para obtener un
+        mejor precio por el mismo rendimiento.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Alternativas viables</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AMD Ryzen 5 5500</td>
+            <td>Precio</td>
+            <td>Socket AM4</td>
+          </tr>
+          <tr>
+            <td>AMD Ryzen 5 5600</td>
+            <td>Rendimiento</td>
+            <td>Precio y socket AM4</td>
+          </tr>
+          <tr>
+            <td>AMD Ryzen 5 8500</td>
+            <td>Rendimiento, socket, compatibilidad con DDR5</td>
+            <td>Precio (70% más que la opción 1)</td>
+          </tr>
+          <tr>
+            <td>Intel i5 12400</td>
+            <td>Precio y rendimiento</td>
+            <td>
+              La vigencia del socket (pensando en una mejora futura) es
+              potencialmente corta
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="tarjeta-gráfica">Tarjeta gráfica</h3>
+      <p>
+        Una vez que se eligió el procesador se buscó una gráfica acorde al
+        presupuesto y al CPU elegido, pero al priorizar la modernidad del
+        sistema (y con ello la facilidad de actualizaciones futuras) el
+        procesador elegido es muy potente para las tarjetas gráficas que entran
+        en el alcance del presupuesto disponible, por lo que es inevitable un
+        cuello de botella, va a sobrar potencia de CPU en la mayoría de las
+        tareas. Sin embargo, es importante aclarar que aún teniendo cuello de
+        botella esta elección sigue el enfoque de este presupuesto, ya que la
+        tarjeta gráfica es uno de los componentes que menos problemas de
+        compatibilidad causa al querer mejorar los componentes de una
+        computadora. Teniendo esto en claro, luego se priorizaron las GPU de
+        Nvidia debido a que el codec NVENC tiene un menor impacto en el
+        rendimiento al codificar el video del streaming mientras se juega, por
+        estos motivos se seleccionó una RTX 5060 de 8GB GDDR7.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Alternativas viables</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Radeon RX 7600</td>
+            <td>El mejor precio</td>
+            <td>Mayor consumo y peor codec para streaming</td>
+          </tr>
+          <tr>
+            <td>Nvidia RTX 4060</td>
+            <td>Buen precio, codec NVENC</td>
+            <td>
+              Poca disponibilidad, rendimiento pobre respecto al CPU elegido
+            </td>
+          </tr>
+          <tr>
+            <td>Nvidia RTX 5050</td>
+            <td>
+              Codec NVENC, última generación, excelente relación
+              precio-rendimiento
+            </td>
+            <td>rendimiento insuficiente para aprovechar el CPU</td>
+          </tr>
+          <tr>
+            <td>Nvidia RTX 5060</td>
+            <td>
+              Codec NVENC, última generación, buena relación precio-rendimiento
+            </td>
+            <td>
+              Precio al límite del presupuesto, rendimiento aceptable para el
+              CPU
+            </td>
+          </tr>
+          <tr>
+            <td>Nvidia RTX 4070</td>
+            <td>Rendimiento ideal para el CPU elegido, codec NVENC</td>
+            <td>Precio muy por encima del presupuesto y poca disponibilidad</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="almacenamiento">Almacenamiento</h3>
+      <p>
+        Se seleccionó una memoria con la tecnología más rápida de la actualidad,
+        NVME, que aprovecha la velocidad del bus PCI Express alcanzando hasta
+        3000 MB/s superando ampliamente los 600 MB/s que puede alcanzar la
+        interfaz SATA 3. Para ajustarnos al presupuesto se selecciono una
+        capacidad pequeña pero más que suficiente para almacenar el sistema
+        operativo, un navegador, el software de streaming, y más de un juego.
+      </p>
+      <h3 id="memoria-ram">Memoria RAM</h3>
+      <p>
+        Se propone un total de 32 GB de memoria RAM de tipo DDR5 a 5200 Mhz para
+        llevar adelante sin problemas el multitasking que requiere una
+        transmisión en vivo. Elegir DDR5 por encima de DDR4 permite superar las
+        capacidades y frecuencias limites de DDR4, pudiendo actualizar en un
+        futuro a velocidades de transferencia de hasta 7200 MHz. Además, se
+        eligieron 2 sticks de 16 Gb cada uno para que trabajen en dual channel
+        aumentando el ancho de banda y por ende la velocidad de transferencia.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Alternativas viables</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DDR4</td>
+            <td>
+              Precio (teniendo en cuenta también los otros componentes que
+              conlleva)
+            </td>
+            <td>
+              Vida útil potencialmente corta, ya no es el estándar y en un
+              futuro cercano podría no brindar las capacidades que requieran
+              juegos o softwares modernos.
+            </td>
+          </tr>
+          <tr>
+            <td>DDR5</td>
+            <td>
+              Es el nuevo estándar, si los sticks DDR5 que se compren son
+              insuficientes se reemplazan por memorias DDR5 de mejores
+              capacidades sin problema
+            </td>
+            <td>
+              Precio: requiere una placa madre y procesador compatibles, y al
+              ser ambos de última generación son más caros.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="fuente">Fuente</h3>
+      <p>
+        Debido a que es un componente crítico, que en caso de falla puede
+        conllevar la perdida de otros componente o la totalidad de ellos, se
+        eligió una fuente de marca reconocida (Gigabyte) con certificación 80
+        Plus Silver. Se consideraron suficientes 550 Watts ya que el CPU
+        seleccionado especifica un TDP de 65 Watts, la GPU 180 Watts y el resto
+        de los componentes se estima que en carga promedian 120 Watts, por lo
+        que todo esto sumaría un máximo de 365 Watts en carga, y la
+        certificación de la fuente nos garantiza disponer del 80% de 550 Watts
+        (440 Watts).
+      </p>
+      <h3 id="placa-madre">Placa madre</h3>
+      <p>
+        Sin rebuscar demasiado, se eligió la placa madre de menor precio
+        compatible con los componentes mencionados anteriormente (zócalo AM5,
+        DDR5 y NVME).
+      </p>
+      <h3 id="gabinete-y-periféricos">Gabinete y periféricos</h3>
+      <p>
+        El gabinete fue elegido por traer 3 ventiladores instalados ya que el
+        precio de estos por separados es mayor.<br />
+        Se seleccionó un gabinete con 3 ventiladores incluidos, un monitor,
+        webcam, auriculares con micrófono, teclado y mouse, de gama de entrada
+        para adecuarse al presupuesto y porque Minecraft no es un juego
+        competitivo que requiera gran precisión en estos componentes.
+      </p>
+      <h3
+        id="fuente-de-alimentación-ininterrumpida-para-contrarrestar-cortes-de-energía"
+      >
+        Fuente de alimentación ininterrumpida para contrarrestar cortes de
+        energía
+      </h3>
+      <p>
+        Se añadió un UPS (Uninterruptable Power Supply: fuente de alimentación
+        ininterrumpida) para permitir que el usuario del equipo cierre la
+        transmisión de manera controlada en caso de que el suministro de energía
+        se corte de forma inesperada.
+      </p>
+      <h2 id="rendimiento-esperado">Rendimiento esperado</h2>
+      <p>
+        El rendimiento en Minecraft varía ampliamente según la configuración
+        gráfica, principalmente según la distancia de renderizado (medida en
+        chunks) y los shaders seleccionados.<br />
+        Según los benchmarks reales que se pudieron encontrar, en 1080p, con una
+        distancia de renderizado de 12 chunks y el resto de opciones gráficas en
+        alto, se estima un rendimiento de 800 fps en promedio (oscilando desde
+        650 a 950). Sin embargo esto cambia rotundamente al configurar shaders,
+        ya que algunos tiene una carga mucho más pesada que otros; con shaders
+        de carga gráfica pesada se estiman unos 170 fps en promedio, con shaders
+        de carga media unos 320 fps en promedio, y con shaders livianos +600
+        fps.<br />
+        Debido a la significativa variación de rendimiento según la
+        configuración gráfica, el límite para la calidad de la transmisión en
+        vivo estará dado por la configuración gráfica que se seleccione; a mayor
+        calidad de transmisión, se debería elegir una menor configuración
+        gráfica en el juego para balancear el rendimiento de ambas tareas.<br />
+        En conclusión, el codificador NVENC de Nvidia está optimizado para no
+        generar un impacto considerable al ser utilizado mientras se juega, por
+        lo que el equipo que se recomienda no debería presentar ningún problema
+        al transmitir en vivo en calidad 1080p a 60fps con un bitrate de 6.000
+        kbps siempre y cuando se seleccione una configuración gráfica adecuada
+        en el juego.
+      </p>
+      <h2 id="colaboración-de-la-ia">Colaboración de la IA</h2>
+      <h3 id="ayuda-en-la-elección-inicial">Ayuda en la elección inicial</h3>
+      <p>
+        <img src="./img-emanuel/capturas-ia/eleccion-ddr4-ddr5.webp" alt="Elección entre DDR4 y DDR5" /><br />
+        Estoy de acuerdo con la respuesta. DDR5 vio la luz en 2020, ya pasaron 5
+        años, por lo que las próximas placas madres solo serán compatibles con
+        DDR5 y por lo tanto el zócalo del CPU será actualizable por mucho más
+        tiempo que aquellos que traen las placas madres con DDR4.
+      </p>
+      <h3 id="comparación-y-validación-con-fuentes-externas">
+        Comparación y validación con fuentes externas
+      </h3>
+      <p>
+        <img src="./img-emanuel/capturas-ia/comparacion-cpu-en-streaming.webp" alt="Comparación de CPUs en streaming" /><br />
+        <img src="./img-emanuel/capturas-ia/comparacion-cpu-en-streaming-fuente-externa.webp" alt="Fin de producción de DDR4 - Tom's Hardware" />
+      </p>
+      <p>
+        Coincidente con la respuesta de la IA, no es recomendable armar una PC
+        con DDR4 hoy en día, la fuente externa (Tom’s Hardware) afirma que antes
+        del próximo año se dejaran de producir en su totalidad, por lo tanto
+        DDR5 es necesario.
+      </p>
+      <h3 id="explicación-técnica-y-traducción-al-lenguaje-común">
+        Explicación técnica y traducción al “lenguaje común”
+      </h3>
+      <p>
+        <img src="./img-emanuel/capturas-ia/explicacion-bitrate.webp" alt="Explicación bitrate" /><br />
+        En palabras menos técnicas, para que alguien totalmente ajeno a la
+        tecnología entienda: el bitrate es la clave de la calidad en un video
+        digital, un bitrate bajo envía pocos detalles, como si estuviera borroso
+        (o pixelado) y un bitrate alto envía mayor cantidad de detalles. Y para
+        que la imagen nítida llegue sin problemas, no necesitas una computadora
+        más potente, sino que la tubería por la que viaja (la conexión a
+        internet) sea lo suficientemente ancha para enviar todos esos datos por
+        segundo.
+      </p>
+    </section>
+  </body>
+</html>
